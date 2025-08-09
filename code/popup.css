@@ -1,0 +1,115 @@
+:root {
+  --space-xs: 2px;
+  --space-sm: 4px;
+  --space-md: 8px;
+  --radius:   4px;
+
+  --bg-page:   #f7f9fc;
+  --bg-card:   #ffffff;
+  --text-base: #2d333b;
+  --border:    #d1d5da;
+  --primary:   #e2e5e9;
+  --accent:    #f66c0f;
+  --danger:    #aa2e25;
+  --shadow:   0 1px 3px rgba(0,0,0,0.06);
+  --font-base: 14px 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text-base);
+  font: var(--font-base);
+  width: 640px;
+  margin: 0;
+  padding: var(--space-md);
+  box-sizing: border-box;
+}
+
+.rule,
+.rule-add {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-xs) var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+input[type="text"] {
+  flex: 1;
+  height: 20px;
+  padding: 0 var(--space-sm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  line-height: 20px;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  transition: border-color .2s;
+}
+
+input[type="text"]:focus {
+  border-color: var(--accent);
+}
+
+button {
+  height: 24px;
+  padding: 0 var(--space-md);
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s, transform .1s;
+  min-width: 32px;
+}
+
+button.open-one {
+  color: #1d1d1d;
+}
+
+button:hover {
+  background: #585f66;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.rule-add button {
+  background: var(--accent);
+}
+
+.rule-add button:hover {
+  background: #d35b00;
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+button.danger:hover {
+  background: #8a261f;
+}
+
+.rule span.drag-handle {
+  cursor: move;
+  font-size: 1em;
+  color: var(--border);
+  user-select: none;
+}
+
+.rule.dragging span.drag-handle {
+  cursor: grabbing;
+  color: var(--accent);
+}
+
+.rule span[draggable] {
+  cursor: move;
+}

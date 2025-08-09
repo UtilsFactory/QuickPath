@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "QuickPath",
+  "description": "Save favorite URL paths (without domains) and open them instantly in the current tab or across all browser tabs with one click.",
+  "version": "25.2",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "QuickPath@UtilsFactory"
+    }
+  },
+  "icons": {
+	"16": "icons/icon16.png",
+	"19": "icons/icon19.png",
+	"32": "icons/icon32.png",
+	"38": "icons/icon38.png",
+	"48": "icons/icon48.png",
+	"96": "icons/icon96.png",
+	"128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+		"16": "icons/icon16.png",
+		"19": "icons/icon19.png",
+		"32": "icons/icon32.png",
+		"38": "icons/icon38.png",
+		"48": "icons/icon48.png",
+		"96": "icons/icon96.png",
+		"128": "icons/icon128.png"
+    }
+  }
+}
